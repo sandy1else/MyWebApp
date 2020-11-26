@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyWebApp", "MyWebApp\MyWebApp.csproj", "{E43C7A31-4544-4B94-93F0-217950DDF489}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogicLayer", "LogicLayer\LogicLayer.csproj", "{56A013EE-23FB-46D8-9B80-92C1F97649DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServices", "WebServices\WebServices.csproj", "{B6738E6E-CFF7-4439-9D2C-4669A3F2A528}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyWebApp.Test", "MyWebApp.Test\MyWebApp.Test.csproj", "{607A6955-A83F-40BF-867E-066C9E786535}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E43C7A31-4544-4B94-93F0-217950DDF489}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E43C7A31-4544-4B94-93F0-217950DDF489}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E43C7A31-4544-4B94-93F0-217950DDF489}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E43C7A31-4544-4B94-93F0-217950DDF489}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56A013EE-23FB-46D8-9B80-92C1F97649DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56A013EE-23FB-46D8-9B80-92C1F97649DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56A013EE-23FB-46D8-9B80-92C1F97649DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56A013EE-23FB-46D8-9B80-92C1F97649DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6738E6E-CFF7-4439-9D2C-4669A3F2A528}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6738E6E-CFF7-4439-9D2C-4669A3F2A528}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6738E6E-CFF7-4439-9D2C-4669A3F2A528}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6738E6E-CFF7-4439-9D2C-4669A3F2A528}.Release|Any CPU.Build.0 = Release|Any CPU
+		{607A6955-A83F-40BF-867E-066C9E786535}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{607A6955-A83F-40BF-867E-066C9E786535}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{607A6955-A83F-40BF-867E-066C9E786535}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{607A6955-A83F-40BF-867E-066C9E786535}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35;packages\Unity.Interception.2.1.505.0\lib\NET35;packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Data.5.0.505.0\lib\NET35
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45
+		SolutionGuid = {31360D1B-517B-435E-BDB1-4715A8097D2B}
+	EndGlobalSection
+EndGlobal

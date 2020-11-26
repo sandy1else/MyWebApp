@@ -1,0 +1,4 @@
+E:\MyProjects\MyWebApp\MyWebApp\obj\Debug\MyWebApp.csprojAssemblyReference.cache
+E:\MyProjects\MyWebApp\MyWebApp\obj\Debug\RdlCompile.cache
+E:\MyProjects\MyWebApp\MyWebApp\obj\Debug\RdlCompile.compiled
+E:\MyProjects\MyWebApp\MyWebApp\obj\Debug\MyWebApp.csproj.CoreCompileInputs.cache

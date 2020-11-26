@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="MyWebApp.MasterPages.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Master</title>
+    <link href="../CSS/SiteMaster.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <div style="background-color: lightgray">
+            <div class="float-l">
+                <asp:LinkButton Font-Underline="false" PostBackUrl="~/Login/Home.aspx" ID="linkBtnHome" runat="server">Home</asp:LinkButton>
+            </div>
+            <div class="float-l">
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                    <ContentTemplate>
+                        <asp:Menu ID="MainMenu" Orientation="Horizontal" MaximumDynamicDisplayLevels="3" runat="server">
+                        </asp:Menu>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+
+
+            </div>
+
+            <div class="float-r">
+                <div>
+                    <asp:Label ID="lblLoginId" runat="server" Text=""></asp:Label>
+                </div>
+                <div>
+                    <asp:Button ID="btnSignOut" runat="server" Text="Sign Out" OnClick="btnSignOut_Click" />
+                </div>
+
+            </div>
+        </div>
+
+        <div class="clear"></div>
+        <hr />
+        <div style="min-height:600px;">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <footer>
+            <hr />
+            <center>
+                © Sandip Kabiraz
+            </center>
+
+        </footer>
+    </form>
+</body>
+
+</html>

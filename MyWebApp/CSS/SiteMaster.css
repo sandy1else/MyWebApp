@@ -1,0 +1,84 @@
+﻿.signOut-btn {
+    margin-top: 20px;
+    margin-right: 20px;
+    padding: 10px 24px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.signOut-lbl {
+    padding: 10px 24px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.clear {
+    clear: both;
+}
+
+/*[ float ]
+-----------------------------------------------------------
+*/
+.float-l {
+    float: left;
+}
+
+.float-r {
+    float: right;
+}
+
+.float-l-i {
+    float: left;
+    display: inline-block;
+}
+
+.float-r-i {
+    float: right;
+    display: inline-block;
+}
+
+
+#content {
+    clear: both;
+    width: 950px;
+    position: relative;
+    min-height: 330px;
+}
+
+.footer {
+    position: relative;
+    height: 5em;
+    margin-bottom: -5em;
+    /* bottom:3px;
+    z-index:05px;
+    margin-top:-5em; */
+    background-image: url('bg_footer111.gif');
+    background-repeat: no-repeat;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    color:darkgrey;
+    left: 5px;
+    right: -5px;
+    width: 982px;
+}
+
+.loading-panel {
+    background: rgba(0, 0, 0, 0.2) none repeat scroll 0 0;
+    position: relative;
+    width: 100%;
+}
+
+.loading-container {
+    background: rgba(49, 133, 156, 0.4) none repeat scroll 0 0;
+    color: #fff;
+    font-size: 90px;
+    height: 100%;
+    left: 0;
+    padding-top: 15%;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 999999;
+}
