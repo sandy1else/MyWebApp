@@ -7,6 +7,7 @@
     <title></title>
     <link href="../CSS/main.css" rel="stylesheet" />
     <link href="../CSS/factory.css" rel="stylesheet" />
+    <script src="../Scripts/jquery-3.5.1.js"></script>
     <script src="../js/main.js"></script>
 </head>
 <body>
@@ -33,6 +34,9 @@
                         </div>
                         <div class="container-login100-form-btn m-t-17">
                             <asp:Button ID="btnLogin" CssClass="login100-form-btn" runat="server" Text="Login" OnClick="btnLogin_Click" />
+                        </div>
+                        <div class="container-login100-form-btn m-t-17">
+                            <asp:Label ID="lblError" runat="server" Text="" ForeColor="Red"></asp:Label>
                         </div>
                         <div class="w-full text-center p-t-55">
                             <span class="txt2">Not a member?</span>

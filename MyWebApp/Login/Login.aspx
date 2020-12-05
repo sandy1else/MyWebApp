@@ -35,6 +35,9 @@
                         <div class="container-login100-form-btn m-t-17">
                             <asp:Button ID="btnLogin" CssClass="login100-form-btn" runat="server" Text="Login" OnClick="btnLogin_Click" />
                         </div>
+                        <div class="container-login100-form-btn m-t-17">
+                            <asp:Label ID="lblError" runat="server" Text="" ForeColor="Red"></asp:Label>
+                        </div>
                         <div class="w-full text-center p-t-55">
                             <span class="txt2">Not a member?</span>
                             <a class="txt2 bo1">Sign up now</a>

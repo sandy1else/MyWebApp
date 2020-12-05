@@ -6,7 +6,7 @@ using System.Web;
 
 namespace MyWebApp
 {
-    public partial class BasePage : System.Web.UI.Page
+    public partial class BasePage : System.Web.UI.Page,IHttpModule
     {
         public static User currentUser;
 
@@ -24,7 +24,10 @@ namespace MyWebApp
                 HttpContext.Current.Response.Redirect("~/Login/Login.aspx");
             }
         }
-         
 
+        void IHttpModule.Init(HttpApplication context)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

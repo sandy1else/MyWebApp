@@ -4,17 +4,20 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <_PublishTargetUrl>E:\Publish</_PublishTargetUrl>
+    <_PublishTargetUrl>E:\Publish\MyApp</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="Async/CalCulatePate.aspx">
       <publishTime>10/25/2020 23:10:35</publishTime>
     </File>
+    <File Include="bin/AjaxControlToolkit.dll">
+      <publishTime>05/20/2020 14:04:00</publishTime>
+    </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>11/04/2020 21:55:59</publishTime>
+      <publishTime>12/04/2020 22:43:05</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>11/04/2020 21:55:59</publishTime>
+      <publishTime>12/04/2020 22:43:05</publishTime>
     </File>
     <File Include="bin/de/Microsoft.ReportViewer.Common.resources.dll">
       <publishTime>02/25/2020 23:35:32</publishTime>
@@ -35,7 +38,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>02/25/2020 23:35:32</publishTime>
     </File>
     <File Include="bin/EnvDTE.dll">
-      <publishTime>10/31/2020 12:05:39</publishTime>
+      <publishTime>11/24/2020 20:12:51</publishTime>
     </File>
     <File Include="bin/es/Microsoft.ReportViewer.Common.resources.dll">
       <publishTime>02/25/2020 23:35:32</publishTime>
@@ -128,16 +131,31 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>02/25/2020 23:35:32</publishTime>
     </File>
     <File Include="bin/LogicLayer.dll">
-      <publishTime>11/04/2020 20:43:47</publishTime>
+      <publishTime>12/04/2020 19:41:06</publishTime>
     </File>
     <File Include="bin/LogicLayer.pdb">
-      <publishTime>11/04/2020 20:43:47</publishTime>
+      <publishTime>12/04/2020 19:41:06</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.SignalR.Core.dll">
+      <publishTime>05/04/2017 16:25:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.SignalR.SystemWeb.dll">
+      <publishTime>05/04/2017 16:25:40</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>10/11/2020 11:02:54</publishTime>
     </File>
     <File Include="bin/Microsoft.MSXML.dll">
-      <publishTime>10/31/2020 12:05:39</publishTime>
+      <publishTime>11/24/2020 20:12:51</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.dll">
+      <publishTime>01/19/2019 10:50:30</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
+      <publishTime>01/19/2019 10:50:50</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.dll">
+      <publishTime>01/19/2019 10:51:10</publishTime>
     </File>
     <File Include="bin/Microsoft.Practices.EnterpriseLibrary.Common.dll">
       <publishTime>05/11/2011 12:51:42</publishTime>
@@ -182,25 +200,37 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>12/10/2016 15:26:34</publishTime>
     </File>
     <File Include="bin/Microsoft.VisualStudio.OLE.Interop.dll">
-      <publishTime>10/31/2020 12:05:39</publishTime>
+      <publishTime>11/24/2020 20:12:51</publishTime>
     </File>
     <File Include="bin/Microsoft.VisualStudio.Shell.Interop.8.0.dll">
-      <publishTime>10/31/2020 12:05:39</publishTime>
+      <publishTime>11/24/2020 20:12:51</publishTime>
     </File>
     <File Include="bin/Microsoft.VisualStudio.Shell.Interop.dll">
-      <publishTime>10/31/2020 12:05:39</publishTime>
+      <publishTime>11/24/2020 20:12:51</publishTime>
     </File>
     <File Include="bin/Microsoft.VisualStudio.TextManager.Interop.8.0.dll">
-      <publishTime>10/31/2020 12:05:39</publishTime>
+      <publishTime>11/24/2020 20:12:51</publishTime>
     </File>
     <File Include="bin/Microsoft.VisualStudio.TextManager.Interop.dll">
-      <publishTime>10/31/2020 12:05:39</publishTime>
+      <publishTime>11/24/2020 20:12:51</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>04/23/2012 15:23:58</publishTime>
     </File>
     <File Include="bin/MyWebApp.dll">
-      <publishTime>11/04/2020 21:55:57</publishTime>
+      <publishTime>12/04/2020 22:43:02</publishTime>
     </File>
     <File Include="bin/MyWebApp.pdb">
-      <publishTime>11/04/2020 21:55:57</publishTime>
+      <publishTime>12/04/2020 22:43:02</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>11/09/2019 00:56:44</publishTime>
+    </File>
+    <File Include="bin/NuGet.Frameworks.dll">
+      <publishTime>10/24/2020 04:36:42</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>11/27/2012 13:00:52</publishTime>
     </File>
     <File Include="bin/pt/Microsoft.ReportViewer.Common.resources.dll">
       <publishTime>02/25/2020 23:35:32</publishTime>
@@ -287,7 +317,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/01/2020 14:44:26</publishTime>
     </File>
     <File Include="bin/stdole.dll">
-      <publishTime>10/31/2020 12:05:39</publishTime>
+      <publishTime>11/24/2020 20:12:51</publishTime>
     </File>
     <File Include="bin/zh-CHS/Microsoft.ReportViewer.Common.resources.dll">
       <publishTime>02/25/2020 23:35:32</publishTime>
@@ -325,8 +355,68 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="bin/zh-CHT/Microsoft.ReportViewer.WinForms.resources.dll">
       <publishTime>02/25/2020 23:35:32</publishTime>
     </File>
+    <File Include="Bootstrap/css/bootstrap-grid.css">
+      <publishTime>11/09/2020 13:08:34</publishTime>
+    </File>
+    <File Include="Bootstrap/css/bootstrap-grid.css.map">
+      <publishTime>11/09/2020 13:08:34</publishTime>
+    </File>
+    <File Include="Bootstrap/css/bootstrap-grid.min.css">
+      <publishTime>11/09/2020 13:08:34</publishTime>
+    </File>
+    <File Include="Bootstrap/css/bootstrap-grid.min.css.map">
+      <publishTime>11/09/2020 13:08:34</publishTime>
+    </File>
+    <File Include="Bootstrap/css/bootstrap-reboot.css">
+      <publishTime>11/09/2020 13:08:34</publishTime>
+    </File>
+    <File Include="Bootstrap/css/bootstrap-reboot.css.map">
+      <publishTime>11/09/2020 13:08:34</publishTime>
+    </File>
+    <File Include="Bootstrap/css/bootstrap-reboot.min.css">
+      <publishTime>11/09/2020 13:08:34</publishTime>
+    </File>
+    <File Include="Bootstrap/css/bootstrap-reboot.min.css.map">
+      <publishTime>11/09/2020 13:08:34</publishTime>
+    </File>
+    <File Include="Bootstrap/css/bootstrap.css">
+      <publishTime>11/09/2020 13:08:34</publishTime>
+    </File>
+    <File Include="Bootstrap/css/bootstrap.css.map">
+      <publishTime>11/09/2020 13:08:34</publishTime>
+    </File>
+    <File Include="Bootstrap/css/bootstrap.min.css">
+      <publishTime>11/09/2020 13:08:34</publishTime>
+    </File>
+    <File Include="Bootstrap/css/bootstrap.min.css.map">
+      <publishTime>11/09/2020 13:08:34</publishTime>
+    </File>
+    <File Include="Bootstrap/js/bootstrap.bundle.js">
+      <publishTime>11/09/2020 13:08:33</publishTime>
+    </File>
+    <File Include="Bootstrap/js/bootstrap.bundle.js.map">
+      <publishTime>11/09/2020 13:08:33</publishTime>
+    </File>
+    <File Include="Bootstrap/js/bootstrap.bundle.min.js">
+      <publishTime>11/09/2020 13:08:33</publishTime>
+    </File>
+    <File Include="Bootstrap/js/bootstrap.bundle.min.js.map">
+      <publishTime>11/09/2020 13:08:33</publishTime>
+    </File>
+    <File Include="Bootstrap/js/bootstrap.js">
+      <publishTime>11/09/2020 13:08:33</publishTime>
+    </File>
+    <File Include="Bootstrap/js/bootstrap.js.map">
+      <publishTime>11/09/2020 13:08:33</publishTime>
+    </File>
+    <File Include="Bootstrap/js/bootstrap.min.js">
+      <publishTime>11/09/2020 13:08:34</publishTime>
+    </File>
+    <File Include="Bootstrap/js/bootstrap.min.js.map">
+      <publishTime>11/09/2020 13:08:34</publishTime>
+    </File>
     <File Include="ConnectionStrings.config">
-      <publishTime>11/01/2020 09:48:41</publishTime>
+      <publishTime>12/04/2020 22:42:25</publishTime>
     </File>
     <File Include="CRUD/GenderPage.aspx">
       <publishTime>10/23/2020 11:38:56</publishTime>
@@ -338,7 +428,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/23/2020 10:32:50</publishTime>
     </File>
     <File Include="CRUD/reports/UserReport.aspx">
-      <publishTime>11/03/2020 19:16:59</publishTime>
+      <publishTime>11/12/2020 21:51:00</publishTime>
     </File>
     <File Include="CRUD/reports/UserReport.rdlc">
       <publishTime>11/01/2020 18:58:11</publishTime>
@@ -350,7 +440,13 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/13/2020 20:20:23</publishTime>
     </File>
     <File Include="CSS/SiteMaster.css">
-      <publishTime>10/21/2020 12:48:27</publishTime>
+      <publishTime>11/13/2020 23:14:58</publishTime>
+    </File>
+    <File Include="Examples/AjaxPages/AjaxExample.aspx">
+      <publishTime>12/03/2020 23:37:45</publishTime>
+    </File>
+    <File Include="Examples/AsyncPages/AsyncPage.aspx">
+      <publishTime>11/14/2020 19:25:37</publishTime>
     </File>
     <File Include="fonts/montserrat/Montserrat-Black.ttf">
       <publishTime>10/13/2020 12:18:01</publishTime>
@@ -463,6 +559,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="fonts/poppins/Poppins-ThinItalic.ttf">
       <publishTime>10/13/2020 12:25:43</publishTime>
     </File>
+    <File Include="Images/loading.gif">
+      <publishTime>11/13/2020 22:48:52</publishTime>
+    </File>
     <File Include="js/main.js">
       <publishTime>10/13/2020 12:30:12</publishTime>
     </File>
@@ -470,16 +569,46 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/20/2020 23:34:40</publishTime>
     </File>
     <File Include="Login/Login.aspx">
-      <publishTime>10/20/2020 23:27:44</publishTime>
+      <publishTime>12/04/2020 21:46:17</publishTime>
     </File>
     <File Include="MasterPages/Site.Master">
-      <publishTime>11/01/2020 21:50:40</publishTime>
+      <publishTime>11/14/2020 21:59:03</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>11/01/2020 14:44:27</publishTime>
+      <publishTime>12/02/2020 12:02:24</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>11/04/2020 21:55:58</publishTime>
+      <publishTime>12/04/2020 22:43:03</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.5.1.js">
+      <publishTime>11/10/2020 22:50:37</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.5.1.min.js">
+      <publishTime>11/10/2020 22:50:37</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.5.1.min.map">
+      <publishTime>11/10/2020 22:50:37</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.5.1.slim.js">
+      <publishTime>11/10/2020 22:50:37</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.5.1.slim.min.js">
+      <publishTime>11/10/2020 22:50:37</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.5.1.slim.min.map">
+      <publishTime>11/10/2020 22:50:37</publishTime>
+    </File>
+    <File Include="Scripts/jquery.signalR-2.2.2.js">
+      <publishTime>12/02/2020 12:02:23</publishTime>
+    </File>
+    <File Include="Scripts/jquery.signalR-2.2.2.min.js">
+      <publishTime>12/02/2020 12:02:23</publishTime>
+    </File>
+    <File Include="Scripts/MicrosoftAjax.debug.js">
+      <publishTime>11/10/2020 13:34:39</publishTime>
+    </File>
+    <File Include="Scripts/MicrosoftAjax.js">
+      <publishTime>11/10/2020 13:34:39</publishTime>
     </File>
     <File Include="SqlServerTypes/readme.htm">
       <publishTime>11/01/2020 14:44:26</publishTime>
@@ -497,7 +626,13 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/01/2020 14:44:26</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/04/2020 21:55:57</publishTime>
+      <publishTime>12/04/2020 21:36:08</publishTime>
+    </File>
+    <File Include="WebSocketPages/WebChat.html">
+      <publishTime>12/03/2020 14:57:10</publishTime>
+    </File>
+    <File Include="WebSocketPages/WebSocketPage.aspx">
+      <publishTime>12/02/2020 20:22:30</publishTime>
     </File>
   </ItemGroup>
 </Project>

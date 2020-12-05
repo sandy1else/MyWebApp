@@ -20,7 +20,7 @@ namespace MyWebApp.Examples.AjaxPages
             CheckPageLoad();
             if (!IsPostBack)
             {
-
+                Page.ClientScript.RegisterStartupScript(GetType(),"MyKey","Myfunction();",true);
             }
         }
 

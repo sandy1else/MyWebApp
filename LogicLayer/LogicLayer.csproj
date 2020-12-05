@@ -61,6 +61,7 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -70,6 +71,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ADO\ADODataAccess.cs" />
     <Compile Include="BusinessLogic\GenderManager.cs" />
     <Compile Include="BusinessLogic\PracticeManager.cs" />
     <Compile Include="BusinessLogic\SessionTypeManager.cs" />
@@ -95,6 +97,7 @@
     <Compile Include="BusinessObject\Program.cs" />
     <Compile Include="BusinessObject\Student.cs" />
     <Compile Include="BusinessObject\User.cs" />
+    <Compile Include="DAAB\DaabDataAccess.cs" />
     <Compile Include="DataLogic\DataLayer\RepositoryManager.cs" />
     <Compile Include="DataLogic\IRepository\IProgram.cs" />
     <Compile Include="DataLogic\IRepository\IRoleMenu.cs" />
@@ -125,6 +128,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BusinessObject\RO\" />
+    <Folder Include="LINQSQL\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

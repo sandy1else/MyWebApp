@@ -54,7 +54,8 @@ namespace MyWebApp.Login
             }
             catch (Exception ex)
             {
-
+                ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Only alert Message');", true);
+                lblError.Text = ex.Message;
             }
         }
 

@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServices", "WebServices\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyWebApp.Test", "MyWebApp.Test\MyWebApp.Test.csproj", "{607A6955-A83F-40BF-867E-066C9E786535}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestFullWebServices", "RestFullWebServices\RestFullWebServices.csproj", "{7B777A62-F223-41E7-944B-DB81F5366F4C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,13 +35,17 @@ Global
 		{607A6955-A83F-40BF-867E-066C9E786535}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{607A6955-A83F-40BF-867E-066C9E786535}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{607A6955-A83F-40BF-867E-066C9E786535}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B777A62-F223-41E7-944B-DB81F5366F4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B777A62-F223-41E7-944B-DB81F5366F4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B777A62-F223-41E7-944B-DB81F5366F4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B777A62-F223-41E7-944B-DB81F5366F4C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35;packages\Unity.Interception.2.1.505.0\lib\NET35;packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Data.5.0.505.0\lib\NET35
-		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45
 		SolutionGuid = {31360D1B-517B-435E-BDB1-4715A8097D2B}
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35;packages\Unity.Interception.2.1.505.0\lib\NET35;packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Data.5.0.505.0\lib\NET35
 	EndGlobalSection
 EndGlobal
