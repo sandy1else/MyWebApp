@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace LogicLayer.BusinessObject
 {
     [Serializable]
-    public class Person
+    public class Person : PersonalInfo
     {
         public int Id { get; set; }
         public int GenderId { get; set; }

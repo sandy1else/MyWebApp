@@ -2,15 +2,10 @@
 
 <%@ Register Assembly="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <style type="text/css">
-        btn-Smoot {
-            font-size: 10px;
-            font-weight: bold;
-        }
-    </style>
+
+<asp:Content ID="HeadContent" ContentPlaceHolderID="Head" runat="server">
+     
     <script src="../../Scripts/jquery-3.5.1.min.js"></script>
-    <%--<script src="<%=ResolveUrl("~/scripts/jquery-3.5.1.js") %>" type="text/javascript"></script> --%>
 
     <script type="text/javascript">
 
@@ -47,9 +42,9 @@
 
             alert(json);
 
-            
+
             var txt = "Hello";
-             
+
 
             $.ajax({
                 url: 'UserReport.aspx/LenthyProcess',
@@ -83,8 +78,10 @@
             $('#div_Loader').hide();
         }
     </script>
+
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <asp:UpdatePanel ID="UpdatePanel3" runat="server">
         <ContentTemplate>
@@ -138,7 +135,7 @@
         <asp:Label ID="lblThread" runat="server" ForeColor="Red" Text="Label"></asp:Label>
     </div>
 
-    <asp:Button ID="btnThread" runat="server" Text="Thread" OnClick="btnThread_Click"/>
+    <asp:Button ID="btnThread" runat="server" Text="Thread" OnClick="btnThread_Click" />
 
 
 </asp:Content>

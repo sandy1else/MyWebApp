@@ -21,7 +21,7 @@ namespace MyWebApp
             }
             else
             {
-                HttpContext.Current.Response.Redirect("~/Login/Login.aspx");
+                HttpContext.Current.Response.Redirect("~/Login.aspx");
             }
         }
 

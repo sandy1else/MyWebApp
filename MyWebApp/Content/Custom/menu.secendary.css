@@ -1,0 +1,89 @@
+﻿
+#MainMenu { 
+    position: relative;  
+}
+
+#MainMenu, #MainMenu static, #MainMenu ul {
+    display: flex; 
+    align-items: stretch;
+    height: 100%;
+}
+
+    #MainMenu ul li a {
+        padding-right: .5rem !important;
+        padding-left: .5rem !important;
+    }
+
+    #MainMenu a.popout {
+        background-image: none !important; 
+    }
+
+.menu-bottom-border {
+    border-bottom: 1px solid #454545 !important;
+}
+
+.ParentMenu, .ParentMenu:hover {  
+    color: #e3e3e3;
+    text-align: left;   
+    height: 100%;
+}
+
+    .ParentMenu:hover {
+        background-color: #454545;
+    }
+
+    .ParentMenu:active {
+        /*border-bottom: 2px solid #e3e3e3 !important;*/
+    }
+
+.ChildMenu, .ChildMenu:hover {
+    min-width: 100px;
+    width: 100%;
+    background-color: #454545;
+    color: #e3e3e3;
+    text-align: left;
+    padding: .5rem 1rem !important;
+}
+
+    .ChildMenu:hover {
+        background-color: #242424 !important;
+    }
+
+
+#MainMenu ul li:hover > a {
+    background-color: #454545;
+}
+
+#MainMenu ul li a:hover {
+    background-color: #454545;
+}
+
+.selected, .selected:hover {
+    background-color: #454545 !important;
+    color: #e3e3e3;
+}
+
+.level2 {
+    background-color: #454545;
+}
+
+@media (max-width:768px) {
+
+    #MainMenu, #MainMenu static, #MainMenu ul, #MainMenu ul a {
+        width: 100%;
+        flex-direction: column;
+        list-style: none;
+    }
+
+    .ParentMenu {
+        padding-right: 0;
+        padding-left: 0;
+        align-self: stretch;
+    }
+
+    #MainMenu ul li a {
+        padding: .5rem !important;
+        padding-left: 0 !important;
+    }
+}
+

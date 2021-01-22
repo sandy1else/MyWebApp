@@ -1,9 +1,6 @@
 ﻿<%@ Page Async="true" Title="" Language="C#" MasterPageFile="~/MasterPages/Site.Master" AutoEventWireup="true" CodeBehind="AjaxExample.aspx.cs" Inherits="MyWebApp.Examples.AjaxPages.AjaxExample" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-
-    <script type="text/javascript" src="../../Scripts/jquery-3.5.1.min.js"></script>
-
+<asp:Content ID="HeadContent" ContentPlaceHolderID="Head" runat="server">
     <script type="text/javascript">
         function Myfunction() {
             $.ajax({
@@ -12,6 +9,7 @@
             });
         }
     </script>
+
     <script type="text/javascript">
         function FirstF() {
             var txt = "Sandip";
@@ -127,10 +125,10 @@
 
 
     </script>
-
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+     
     <div>
         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
             <ContentTemplate>

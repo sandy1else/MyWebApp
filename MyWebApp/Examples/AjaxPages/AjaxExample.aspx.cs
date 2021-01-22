@@ -15,9 +15,7 @@ namespace MyWebApp.Examples.AjaxPages
     public partial class AjaxExample : BasePage
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-
-            CheckPageLoad();
+        { 
             if (!IsPostBack)
             {
                 Page.ClientScript.RegisterStartupScript(GetType(),"MyKey","Myfunction();",true);

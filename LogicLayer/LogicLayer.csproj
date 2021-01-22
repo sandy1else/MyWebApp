@@ -87,6 +87,8 @@
     <Compile Include="BusinessLogic\UserManager.cs" />
     <Compile Include="BusinessObject\Department.cs" />
     <Compile Include="BusinessObject\Gender.cs" />
+    <Compile Include="BusinessObject\PersonalInfo.cs" />
+    <Compile Include="BusinessObject\RO\Employee.cs" />
     <Compile Include="BusinessObject\Session.cs" />
     <Compile Include="BusinessObject\RoleMenu.cs" />
     <Compile Include="BusinessObject\Role.cs" />
@@ -127,7 +129,6 @@
     <Compile Include="Utilites.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BusinessObject\RO\" />
     <Folder Include="LINQSQL\" />
   </ItemGroup>
   <ItemGroup>

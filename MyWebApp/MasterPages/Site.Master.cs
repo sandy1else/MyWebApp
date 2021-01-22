@@ -18,7 +18,7 @@ namespace MyWebApp.MasterPages
                 if (Session["CurrentUser"] != null)
                 {
                     User user = (User)Session["CurrentUser"];
-                    lblLoginId.Text = user.LoginId + " !";
+                    //lblLoginId.Text = user.LoginId + " !";
 
                     List<LogicLayer.BusinessObject.Menu> menuList = MenuManager.GetAll();
                     Session["MenuList"] = null;
@@ -27,15 +27,15 @@ namespace MyWebApp.MasterPages
                 }
                 else
                 {
-                    lblLoginId.Text = "";
+                    //lblLoginId.Text = "";
                 }
             }
         }
 
-        protected void btnSignOut_Click(object sender, EventArgs e)
+        protected void btnLogOut_Click(object sender, EventArgs e)
         {
             Session.Remove("CurrentUser");
-            Response.Redirect("~/Login/Login.aspx");
+            Response.Redirect("~/Login.aspx");
         }
 
         private void LoadMenu(MenuItem parentMenu, List<LogicLayer.BusinessObject.Menu> menuList)
@@ -45,7 +45,7 @@ namespace MyWebApp.MasterPages
                 MenuItem menu = new MenuItem();
                 menu.Value = item.Id.ToString();
                 menu.Text = item.Name;
-                menu.NavigateUrl = item.URL;
+                menu.NavigateUrl = item.URL; 
 
                 if (parentMenu != null)
                 {
