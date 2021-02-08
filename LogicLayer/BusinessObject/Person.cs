@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace LogicLayer.BusinessObject
 {
-    [Serializable]
-    public class Person : PersonalInfo
+    //[Serializable]
+    public class Person : BaseInfo
     {
         public int Id { get; set; }
         public int GenderId { get; set; }
@@ -19,9 +19,5 @@ namespace LogicLayer.BusinessObject
         public string EmailAddress { get; set; }
         public DateTime DOB { get; set; }
         public string PhotoURL { get; set; }
-        public int CreatedBy { get; set; }
-        public DateTime CreatedDate { get; set; }
-        public Nullable<int> ModifiedBy { get; set; }
-        public Nullable<DateTime> ModifiedDate { get; set; }
     }
 }

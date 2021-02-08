@@ -6,14 +6,10 @@ using System.Threading.Tasks;
 
 namespace LogicLayer.BusinessObject
 {
-    [Serializable]
-    public class Gender
+    //[Serializable]
+    public class Gender : BaseInfo
     {
         public int Id { get; set; } 
-        public string GenderName { get; set; }  
-        public int CreatedBy { get; set; }
-        public DateTime CreatedDate { get; set; }
-        public Nullable<int> ModifiedBy { get; set; }
-        public Nullable<DateTime> ModifiedDate { get; set; }
+        public string GenderName { get; set; }   
     }
 }

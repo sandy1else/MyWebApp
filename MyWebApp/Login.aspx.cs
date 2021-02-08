@@ -1,10 +1,13 @@
 ﻿using LogicLayer;
 using LogicLayer.BusinessLogic;
 using LogicLayer.BusinessObject;
+using LogLayer.BusinessLogic;
+using LogLayer.BusinessObject;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Services;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -23,7 +26,7 @@ namespace MyWebApp
             {
                 string loginId = inputEmail.Value.Trim();
                 string typedPassword = inputPassword.Value.Trim();
-                bool isRemember = chkRemember.Checked;
+                //bool isRemember = chkRemember.Checked;
 
                 if (!string.IsNullOrEmpty(loginId) && !string.IsNullOrEmpty(typedPassword))
                 {
@@ -32,38 +35,72 @@ namespace MyWebApp
                     if (user != null)
                     {
                         string actualPassword = user.Password;
-                        string decryptedPass = Utilites.Decrypt(actualPassword);
+                        string encryptedPass = Utilites.Encrypt(typedPassword);
 
-                        if (decryptedPass == typedPassword)
+                        if (actualPassword == encryptedPass)
                         {
                             Session["CurrentUser"] = null;
                             Session["CurrentUser"] = user;
 
-                            Response.Redirect("~/Home.aspx");
+                            string message = "Login Success";
+                            bool isSuccess = true;
+                            SaveLog(message, isSuccess);
+
+                            Response.Redirect("~/Home.aspx", false);
 
                         }
                         else
                         {
-                            Response.Redirect("~/Login.aspx");
+                            string message = "Password failer";
+                            bool isSuccess = false;
+                            SaveLog(message, isSuccess);
+
+                            //Response.Redirect("~/Login.aspx", false);
+                            Page.ClientScript.RegisterStartupScript(this.GetType(), "alert1", "Hello();", true);
                         }
                     }
                     else
                     {
-                        Response.Redirect("~/Login.aspx");
+
+                        string message = "authentication failer";
+                        bool isSuccess = false;
+                        SaveLog(message, isSuccess);
+
+                        //Response.Redirect("~/Login.aspx", false);
+                        Page.ClientScript.RegisterStartupScript(this.GetType(), "alert1", "Hello();", true);
                     }
                 }
 
             }
             catch (Exception ex)
             {
-                ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Only alert Message');", true);
-                //lblError.Text = ex.Message;
+                ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Exception Occure');", true);
+                //lblError.Text = ex.Message; 
+
+                string message = "Exception";
+                bool isSuccess = false;
+                SaveLog(message, isSuccess);
             }
+        }
+
+        private void SaveLog(string message, bool isSuccess)
+        {
+            #region Log Entry
+
+            string loginId = inputEmail.Value.Trim();
+            string password = inputPassword.Value.Trim();
+            int loginTypeId = (int)Utilites.LoginType.Login;
+            string ipAddress = Request.UserHostAddress;
+            DateTime createdDate = DateTime.Now;
+            LoginLogManager.InsertLog(loginId, password, loginTypeId, isSuccess, ipAddress, message, createdDate);
+
+            #endregion
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
             LogInProcedure();
-        }
+        } 
+         
     }
 }

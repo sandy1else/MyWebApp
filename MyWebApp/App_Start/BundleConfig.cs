@@ -31,6 +31,13 @@ namespace MyWebApp.App_Start
             // ready for production, use the build tool at https://modernizr.com to pick only the tests you need
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                             "~/Scripts/modernizr-*"));
+
+            bundles.Add(new StyleBundle("~/assets/dist/css/bootstrap").Include(
+                    "~/assets/dist/css/bootstrap.min.css",
+                    "~/assets/dist/css/bootstrap-grid.css"));
+
+            bundles.Add(new StyleBundle("~/assets/dist/js/bootstrap").Include(
+                    "~/assets/dist/js/bootstrap.js"));
         }
-    }
+    } 
 }

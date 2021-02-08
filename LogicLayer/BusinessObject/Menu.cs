@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LogicLayer.BusinessObject
 {
-    [Serializable]
+    //[Serializable]
     public class Menu
     {
         public int Id { get; set; }

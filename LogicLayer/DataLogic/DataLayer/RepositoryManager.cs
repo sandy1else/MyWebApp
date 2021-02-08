@@ -66,11 +66,11 @@ namespace LogicLayer.DataLogic.DataLayer
                 return new SQLRoleMenuRepository();
             }
         }
-        public static SQLSessionRepository Session_Repository
+        public static SQLAcademicSessionRepository AcademicSession_Repository
         {
             get
             {
-                return new SQLSessionRepository();
+                return new SQLAcademicSessionRepository();
             }
         }
         public static SQLSessionTypeRepository SessionType_Repository

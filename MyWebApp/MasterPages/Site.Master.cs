@@ -1,5 +1,7 @@
-﻿using LogicLayer.BusinessLogic;
+﻿using LogicLayer;
+using LogicLayer.BusinessLogic;
 using LogicLayer.BusinessObject;
+using LogLayer.BusinessLogic;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,8 +36,23 @@ namespace MyWebApp.MasterPages
 
         protected void btnLogOut_Click(object sender, EventArgs e)
         {
-            Session.Remove("CurrentUser");
+            SaveLog("Success Logout", true);
+            Session.RemoveAll();
             Response.Redirect("~/Login.aspx");
+        }
+
+        private void SaveLog(string message, bool isSuccess)
+        {
+            #region Log Entry
+            User user = (User)Session["CurrentUser"];
+            string loginId = user.LoginId;
+            string password = "";
+            int loginTypeId = (int)Utilites.LoginType.Logout;
+            string ipAddress = Request.UserHostAddress;
+            DateTime createdDate = DateTime.Now;
+            LoginLogManager.InsertLog(loginId, password, loginTypeId, isSuccess, ipAddress, message, createdDate);
+
+            #endregion
         }
 
         private void LoadMenu(MenuItem parentMenu, List<LogicLayer.BusinessObject.Menu> menuList)
@@ -45,7 +62,7 @@ namespace MyWebApp.MasterPages
                 MenuItem menu = new MenuItem();
                 menu.Value = item.Id.ToString();
                 menu.Text = item.Name;
-                menu.NavigateUrl = item.URL; 
+                menu.NavigateUrl = item.URL;
 
                 if (parentMenu != null)
                 {

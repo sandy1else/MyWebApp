@@ -10,6 +10,12 @@ namespace LogicLayer
 {
     public class Utilites
     {
+        public enum LoginType
+        {
+            Login =1,
+            Logout =2
+        }
+
         public static string Encrypt(string clearText)
         {
             string EncryptionKey = "SandipK";

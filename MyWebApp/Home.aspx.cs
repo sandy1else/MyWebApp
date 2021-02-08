@@ -15,7 +15,7 @@ namespace MyWebApp
             if(Session["CurrentUser"] !=null)
             {
                 User user = (User)Session["CurrentUser"];
-                lblLoginId.Text = user.LoginId + " !";
+                //lblLoginId.Text = user.LoginId + " !";
             }
             else
             {

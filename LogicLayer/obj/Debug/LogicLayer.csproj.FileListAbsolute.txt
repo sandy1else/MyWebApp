@@ -15,7 +15,6 @@ E:\MyProjects\MyWebApp\LogicLayer\bin\Debug\Microsoft.Practices.Unity.xml
 E:\MyProjects\MyWebApp\LogicLayer\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
 E:\MyProjects\MyWebApp\LogicLayer\bin\Debug\Microsoft.Practices.Unity.Interception.xml
 E:\MyProjects\MyWebApp\LogicLayer\bin\Debug\Microsoft.Practices.Unity.Interception.Configuration.xml
-E:\MyProjects\MyWebApp\LogicLayer\obj\Debug\LogicLayer.csprojAssemblyReference.cache
 E:\MyProjects\MyWebApp\LogicLayer\obj\Debug\LogicLayer.csproj.CoreCompileInputs.cache
 E:\MyProjects\MyWebApp\LogicLayer\obj\Debug\LogicLayer.csproj.CopyComplete
 E:\MyProjects\MyWebApp\LogicLayer\obj\Debug\LogicLayer.dll

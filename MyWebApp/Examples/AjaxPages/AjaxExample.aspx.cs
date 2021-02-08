@@ -18,7 +18,7 @@ namespace MyWebApp.Examples.AjaxPages
         { 
             if (!IsPostBack)
             {
-                Page.ClientScript.RegisterStartupScript(GetType(),"MyKey","Myfunction();",true);
+                //Page.ClientScript.RegisterStartupScript(GetType(),"MyKey","Myfunction();",true);
             }
         }
 

@@ -2,6 +2,7 @@
 using LogicLayer.BusinessObject;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -10,7 +11,7 @@ using System.Web.UI.WebControls;
 namespace MyWebApp.CRUD
 {
     public partial class MenuPage : BasePage
-    { 
+    {
         protected void Page_Load(object sender, EventArgs e)
         {
             CheckPageLoad();
@@ -18,11 +19,11 @@ namespace MyWebApp.CRUD
             if (!IsPostBack)
             {
                 btnEdit.Enabled = false;
-                btnDelete.Enabled = false; 
+                btnDelete.Enabled = false;
                 btnAddNew.Enabled = false;
 
                 ClearAll(true);
-
+                ClearMessege();
                 PopulatedRootNode();
             }
         }
@@ -77,6 +78,8 @@ namespace MyWebApp.CRUD
             hdnMenuId.Value = menu.Id.ToString();
             txtMenuName.Text = menu.Name;
             txtMenuURL.Text = menu.URL;
+
+            ClearMessege();
         }
 
         protected void btnDelete_Click(object sender, EventArgs e)
@@ -84,54 +87,81 @@ namespace MyWebApp.CRUD
             //
             int menuId = Convert.ToInt32(tvMenu.SelectedNode.Value);
             bool isDelete = MenuManager.Delete(menuId);
-            if(isDelete)
-            { }
-             
+            if (isDelete)
+            {
+                ShowMessage("Menu Deleted Successfully! Please Refresh Page To See The Change!", Color.Green);
+            }
+            else
+            {
+                ShowMessage("Menu Deleted Unsuccessful!", Color.Red);
+            }
+
         }
 
         protected void btnAddNew_Click(object sender, EventArgs e)
         {
             // Hidden Parent ID will not be reset
             ClearAll(false);
+            ClearMessege();
         }
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
-            int parentMenuId = Convert.ToInt32(hdnParentMenuId.Value);
-            int menuId = Convert.ToInt32(hdnMenuId.Value);
-
-            string menuName = txtMenuName.Text.Trim();
-            string menuURL = txtMenuURL.Text.Trim();
-
-            if (!string.IsNullOrEmpty(menuName) && !string.IsNullOrEmpty(menuURL))
+            try
             {
-                LogicLayer.BusinessObject.Menu menu;
-                if (menuId != 0)
+                ClearMessege();
+
+                int parentMenuId = Convert.ToInt32(hdnParentMenuId.Value);
+                int menuId = Convert.ToInt32(hdnMenuId.Value);
+
+                string menuName = txtMenuName.Text.Trim();
+                string menuURL = txtMenuURL.Text.Trim();
+
+                if (!string.IsNullOrEmpty(menuName) && !string.IsNullOrEmpty(menuURL))
                 {
-                    menu = MenuManager.GetById(menuId);
-                }
-                else
-                {
-                    menu = new LogicLayer.BusinessObject.Menu();
-                }
+                    LogicLayer.BusinessObject.Menu menu;
+                    if (menuId != 0)
+                    {
+                        menu = MenuManager.GetById(menuId);
+                    }
+                    else
+                    {
+                        menu = new LogicLayer.BusinessObject.Menu();
+                    }
 
 
-                menu.Name = menuName;
-                menu.URL = menuURL;
-                menu.ParentId = parentMenuId == 0 ? null : (Nullable<int>)parentMenuId;
+                    menu.Name = menuName;
+                    menu.URL = menuURL;
+                    menu.ParentId = parentMenuId == 0 ? null : (Nullable<int>)parentMenuId;
 
-                if (menuId != 0)
-                {
-                    menu.ModifiedBy = currentUser.Id;
-                    menu.ModifiedDate = DateTime.Now;
-                    MenuManager.Update(menu);
+                    if (menuId != 0)
+                    {
+                        menu.ModifiedBy = currentUser.Id;
+                        menu.ModifiedDate = DateTime.Now;
+                        bool isUpdate = MenuManager.Update(menu);
+                        if (isUpdate)
+                        { 
+                            ShowMessage("Menu Updated Successfully! Please Refresh Page To See The Change!", Color.Green);
+                        }
+                    }
+                    else
+                    {
+                        menu.CreatedBy = currentUser.Id;
+                        menu.CreatedDate = DateTime.Now;
+                        menuId = MenuManager.Insert(menu);
+                        if (menuId != 0)
+                        { 
+                            ShowMessage("Menu Saved Successfully! Please Refresh Page To See The Change!", Color.Green);
+                        }
+                    }
+
+                    ClearAll(false);
+
                 }
-                else
-                {
-                    menu.CreatedBy = currentUser.Id;
-                    menu.CreatedDate = DateTime.Now;
-                    MenuManager.Insert(menu);
-                }
+            }
+            catch (Exception ex)
+            {
+                ShowMessage("Exception Occured !", Color.Red); 
             }
 
         }
@@ -142,6 +172,8 @@ namespace MyWebApp.CRUD
             ClearAll(true);
         }
 
+
+        //Reset Hidden Parent ID or not using isRoot
         private void ClearAll(bool isRoot)
         {
             if (isRoot)
@@ -151,6 +183,17 @@ namespace MyWebApp.CRUD
 
             txtMenuName.Text = "";
             txtMenuURL.Text = "";
+        }
+
+        private void ShowMessage(string Message,Color color)
+        {
+            txtMessage.Text = Message;
+            txtMessage.ForeColor = color;
+        }
+
+        private void ClearMessege()
+        {
+            txtMessage.Text = "";
         }
     }
 }

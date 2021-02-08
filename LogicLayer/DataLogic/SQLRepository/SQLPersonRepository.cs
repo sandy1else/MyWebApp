@@ -33,8 +33,7 @@ namespace LogicLayer.DataLogic.SQLRepository
             .Map(x => x.CreatedBy).ToColumn("CreatedBy")
             .Map(x => x.CreatedDate).ToColumn("CreatedDate")
             .Map(x => x.ModifiedBy).ToColumn("ModifiedBy")
-            .Map(x => x.ModifiedDate).ToColumn("ModifiedDate")
-            .Map(x => x.CountryName).ToColumn("Name")
+            .Map(x => x.ModifiedDate).ToColumn("ModifiedDate") 
             .Build();
 
             return mapper;
@@ -59,8 +58,7 @@ namespace LogicLayer.DataLogic.SQLRepository
             db.AddInParameter(cmd, "ContactNo", DbType.String, Person.ContactNo);
             db.AddInParameter(cmd, "EmailAddress", DbType.String, Person.EmailAddress);
             db.AddInParameter(cmd, "DOB", DbType.Date, Person.DOB);
-            db.AddInParameter(cmd, "PhotoURL", DbType.String, Person.PhotoURL);
-            db.AddInParameter(cmd, "CountryName", DbType.String, Person.CountryName);
+            db.AddInParameter(cmd, "PhotoURL", DbType.String, Person.PhotoURL); 
             db.AddInParameter(cmd, "CreatedBy", DbType.Int32, Person.CreatedBy);
             db.AddInParameter(cmd, "CreatedDate", DbType.DateTime, Person.CreatedDate);
             db.AddInParameter(cmd, "ModifiedBy", DbType.Int32, Person.ModifiedBy);
